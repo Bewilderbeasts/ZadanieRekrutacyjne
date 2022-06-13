@@ -1,0 +1,16 @@
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.csproj.AssemblyReference.cache
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.GeneratedMSBuildEditorConfig.editorconfig
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.AssemblyInfoInputs.cache
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.AssemblyInfo.cs
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.csproj.CoreCompileInputs.cache
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.exe
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.deps.json
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.runtimeconfig.json
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.runtimeconfig.dev.json
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.dll
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ref\ZadanieRekrutacyjne.dll
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\bin\Debug\net5.0\ZadanieRekrutacyjne.pdb
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.dll
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ref\ZadanieRekrutacyjne.dll
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.pdb
+D:\REPOZYTORIA\Source\Repos\ZadanieRekrutacyjne\obj\Debug\net5.0\ZadanieRekrutacyjne.genruntimeconfig.cache
