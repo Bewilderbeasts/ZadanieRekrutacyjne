@@ -1,0 +1,5 @@
+C:\Users\mateu\Desktop\ZadanieRekrutacyjne.exe
+C:\Users\mateu\Desktop\ZadanieRekrutacyjne.dll
+C:\Users\mateu\Desktop\ZadanieRekrutacyjne.deps.json
+C:\Users\mateu\Desktop\ZadanieRekrutacyjne.runtimeconfig.json
+C:\Users\mateu\Desktop\ZadanieRekrutacyjne.pdb

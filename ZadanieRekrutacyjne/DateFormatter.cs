@@ -63,17 +63,18 @@ namespace ZadanieRekrutacyjne
 
         private static string ChnDateReturner(bool isSameYear, bool isSameMonthAndYear, DateTime firstDate, DateTime secondDate, string separator)
         {
+
             if (isSameMonthAndYear)
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}";
+                return $"{firstDate.Year}{separator}{firstDate.Month::yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Day:yyyyMMdd}";
             }
             else if (isSameYear)
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}";
+                return $"{firstDate.Year}{separator}{firstDate.Month:yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Month:yyyyMMdd}{separator}{secondDate.Day:yyyyMMdd}";
             }
             else
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Year}{separator}{secondDate.Month}{separator}{secondDate.Day}";
+                return $"{firstDate.Year}{separator}{firstDate.Month:yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Year}{separator}{secondDate.Month:yyyyMMdd}{separator}{secondDate.Day:yyyyMMdd}";
             }
         }
 
