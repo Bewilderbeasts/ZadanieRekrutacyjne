@@ -31,61 +31,66 @@ namespace ZadanieRekrutacyjne
 
             if (cultureInfoFormat == "USA")
             {
-                if (isSameMonthAndYear == true)
-                {
-                    string date = $"{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}{separator}{firstDate.Year}";
-                    return date;
-                }
-                else if (isSameYear == true)
-                {
-                    string date = $"{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}{separator}{firstDate.Year}";
-                    return date;
-                }
-                else
-                {
-                    string date = $"{firstDate.Month}{separator}{firstDate.Day}{separator}{firstDate.Year} - {firstDate.Month}{separator}{firstDate.Day}{separator}{firstDate.Year}";
-                    return date;
-                }
+                return UsaDateReturner (isSameYear, isSameMonthAndYear, firstDate, secondDate, separator);
             }
             else if (cultureInfoFormat == "CHN")
             {
-                
-                if (isSameMonthAndYear == true)
-                {
-                    string date = $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}";
-                    return date;
-                }
-                else if (isSameYear == true)
-                {
-                    string date = $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}";
-                    return date;
-                }
-                else
-                {
-                    string date = $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Year}{separator}{secondDate.Month}{separator}{secondDate.Day}";
-                    return date;
-                }
+                return ChnDateReturner(isSameYear, isSameMonthAndYear, firstDate, secondDate, separator);
             }
             else
             {
+                return RowDateReturner(isSameYear, isSameMonthAndYear, firstDate, secondDate, separator);
+            }
+            
+        }
 
-                if (isSameMonthAndYear == true)
+        private static string UsaDateReturner(bool isSameYear, bool isSameMonthAndYear, DateTime firstDate, DateTime secondDate, string separator)
+        {
+            if (isSameMonthAndYear)
                 {
-                    string date = $"{firstDate.Day} - {secondDate.Day}{separator}{firstDate.Month}{separator}{firstDate.Year}";
-                    return date;
+                    return  $"{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}{separator}{firstDate.Year}";
                 }
-                else if (isSameYear == true)
+                else if (isSameYear)
                 {
-                    string date = $"{firstDate.Day}{separator}{firstDate.Month} - {secondDate.Day}{separator}{secondDate.Month}{separator}{firstDate.Year}";
-                    return date;
+                   return  $"{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}{separator}{firstDate.Year}";
                 }
                 else
                 {
-                    string date = $"{firstDate.Day}{separator}{firstDate.Month}{separator}{firstDate.Year} - {secondDate.Day}{separator}{secondDate.Month}{separator}{secondDate.Year}";
-                    return date;
+                    return $"{firstDate.Month}{separator}{firstDate.Day}{separator}{firstDate.Year} - {firstDate.Month}{separator}{firstDate.Day}{separator}{firstDate.Year}";
+
                 }
+        }
+
+        private static string ChnDateReturner(bool isSameYear, bool isSameMonthAndYear, DateTime firstDate, DateTime secondDate, string separator)
+        {
+            if (isSameMonthAndYear)
+            {
+                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}";
             }
-            
+            else if (isSameYear)
+            {
+                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}";
+            }
+            else
+            {
+                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Year}{separator}{secondDate.Month}{separator}{secondDate.Day}";
+            }
+        }
+
+        private static string RowDateReturner(bool isSameYear, bool isSameMonthAndYear, DateTime firstDate, DateTime secondDate, string separator)
+        {
+            if (isSameMonthAndYear)
+            {
+                return $"{firstDate.Day} - {secondDate.Day}{separator}{firstDate.Month}{separator}{firstDate.Year}";
+            }
+            else if (isSameYear)
+            {
+                return $"{firstDate.Day}{separator}{firstDate.Month} - {secondDate.Day}{separator}{secondDate.Month}{separator}{firstDate.Year}";
+            }
+            else
+            {
+                return $"{firstDate.Day}{separator}{firstDate.Month}{separator}{firstDate.Year} - {secondDate.Day}{separator}{secondDate.Month}{separator}{secondDate.Year}";
+            }
         }
     }
 }

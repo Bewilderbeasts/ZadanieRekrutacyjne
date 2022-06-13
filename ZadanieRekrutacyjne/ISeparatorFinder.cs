@@ -11,8 +11,6 @@ namespace ZadanieRekrutacyjne
         public bool ContainsSlash(string date);
         public bool ContainsPause(string date);
         public bool ContainsDot(string date);
-
         public string Separator(bool dot, bool pause, bool slash);
-
     }
 }

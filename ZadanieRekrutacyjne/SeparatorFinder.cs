@@ -8,6 +8,9 @@ namespace ZadanieRekrutacyjne
 {
     class SeparatorFinder : ISeparatorFinder
     {
+        public const string dotChar = ".";
+        public const string pauseChar = "-";
+        public const string slashChar = "/";
         public bool ContainsDot(string date)
         {
             return date.Contains(".");
@@ -27,15 +30,15 @@ namespace ZadanieRekrutacyjne
         {
             if (dot)
             {
-                return ".";
+                return dotChar;
             }
             else if (pause)
             {
-                return "-";
+                return pauseChar;
             }
             else if (slash)
             {
-                return "/";
+                return slashChar;
             } else
             {
                 throw new Exception("No separator found");

@@ -9,10 +9,8 @@ namespace ZadanieRekrutacyjne
     {
         private static string firstDate;
         private static string secondDate;
-
         private static bool IsSameYear;
         private static bool IsSameMonthAndYear;
-
        
         public static void Main(string[] args)
         {
@@ -60,13 +58,10 @@ namespace ZadanieRekrutacyjne
                     IsSameYear = dateCompare.CheckIfSameYear(firstDate, secondDate);
                     IsSameMonthAndYear = dateCompare.CheckIfSameMonthAndYear(firstDate, secondDate);
 
-
                     string separator = separatorFinder.Separator(separatorFinder.ContainsDot(placeholderfDate), separatorFinder.ContainsPause(placeholderfDate),
                                                     separatorFinder.ContainsSlash(placeholderfDate));
-
-
+                    
                     Console.WriteLine(dateFormatter.DateReturner(cultureInfoFormat, IsSameYear, IsSameMonthAndYear, fDate, sDate, separator)); 
-
                 }
                 else
                 {
