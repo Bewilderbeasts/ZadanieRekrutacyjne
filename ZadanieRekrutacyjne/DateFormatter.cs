@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ZadanieRekrutacyjne
@@ -63,18 +64,32 @@ namespace ZadanieRekrutacyjne
 
         private static string ChnDateReturner(bool isSameYear, bool isSameMonthAndYear, DateTime firstDate, DateTime secondDate, string separator)
         {
+            DateTime chnHelper1;
+            DateTime chnHelper2;
+
+            string chnHelperString = firstDate.ToString("yyyy-MM-dd");
+            string chnHelperString2 = secondDate.ToString("yyyy-MM-dd");
+
+            DateTime.TryParseExact(chnHelperString, "yyyy/MM/dd",
+                     new CultureInfo("zh-CHS"), DateTimeStyles.None, out chnHelper1);
+            DateTime.TryParseExact(chnHelperString2, "yyyy/MM/dd",
+                    new CultureInfo("zh-CHS"), DateTimeStyles.None, out chnHelper2);
+            string firstDateMonth = firstDate.ToString("MM");
+            string firstDateDay = firstDate.ToString("dd");
+            string secondDateMonth = secondDate.ToString("MM");
+            string secondDateDay = secondDate.ToString("dd");
 
             if (isSameMonthAndYear)
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month::yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Day:yyyyMMdd}";
+                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Day}";
             }
             else if (isSameYear)
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month:yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Month:yyyyMMdd}{separator}{secondDate.Day:yyyyMMdd}";
+                return $"{firstDate.Year}{separator}{firstDate.Month}{separator}{firstDate.Day} - {secondDate.Month}{separator}{secondDate.Day}";
             }
             else
             {
-                return $"{firstDate.Year}{separator}{firstDate.Month:yyyyMMdd}{separator}{firstDate.Day:yyyyMMdd} - {secondDate.Year}{separator}{secondDate.Month:yyyyMMdd}{separator}{secondDate.Day:yyyyMMdd}";
+                return $"{firstDate.Year}{separator}{firstDateMonth}{separator}{firstDateDay} - {secondDate.Year}{separator}{secondDateMonth}{separator}{secondDateDay}";
             }
         }
 
