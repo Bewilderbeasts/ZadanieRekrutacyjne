@@ -39,11 +39,9 @@ namespace ZadanieRekrutacyjne
                 if (dateTime.IsDateTime(placeholderfDate) && dateTime.IsDateTime(placeholdersDate))
                 {
                     CultureInfo ci = Thread.CurrentThread.CurrentCulture;
-                    //CultureInfo customCulture = new CultureInfo("mn-MN");
                     
-                    //CultureInfo ci = new CultureInfo("zh-CN");
-                    //Thread.CurrentThread.CurrentCulture = ci;
-                    //Thread.CurrentThread.CurrentUICulture = ci;
+                    Thread.CurrentThread.CurrentCulture = ci;
+                    Thread.CurrentThread.CurrentUICulture = ci;
                     string cultureInfoFormat = dateFormatter.CultureInfoCheckerDate(ci);
 
                     DateTime fDate = DateTime.Parse(placeholderfDate);
@@ -66,7 +64,8 @@ namespace ZadanieRekrutacyjne
                     string separator = separatorFinder.Separator(separatorFinder.ContainsDot(placeholderfDate), separatorFinder.ContainsPause(placeholderfDate),
                                                     separatorFinder.ContainsSlash(placeholderfDate));
                     
-                    Console.WriteLine(dateFormatter.DateReturner(cultureInfoFormat, IsSameYear, IsSameMonthAndYear, fDate, sDate, separator));
+                    Console.WriteLine(dateFormatter.DateReturner(cultureInfoFormat, IsSameYear, IsSameMonthAndYear, fDate, sDate, separator)); 
+
                 }
                 else
                 {
