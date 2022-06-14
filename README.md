@@ -9,7 +9,7 @@
 Simple console app, created for a recruitment at one of the companies. Given two dates, it returns range of those dates (earlier - later date). 
 It takes OS local info to determine a DateTime format it will return, so to get back data formatted as this:
 
-![Picutre showing on of the formats of returned dates](ZadanieRekrutacyjne/ZadanieRekrutacyjne/pics/ChnFormat.png?raw=true "Result")
+![Picutre showing on of the formats of returned dates](ZadanieRekrutacyjne/ZadanieRekrutacyjne/pics/ChnFormat.PNG "Result")
 
 We would need to change variable in Program.cs like this:
 
