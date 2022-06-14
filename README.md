@@ -9,11 +9,11 @@
 Simple console app, created for a recruitment at one of the companies. Given two dates, it returns range of those dates (earlier - later date). 
 It takes OS local info to determine a DateTime format it will return, so to get back data formatted as this:
 
-![Picutre showing on of the formats of returned dates](ZadanieRekrutacyjne/pics/ChnFormat.png?raw=true "Result")
+![Picutre showing on of the formats of returned dates](pics/ChnFormat.png?raw=true "Result")
 
 We would need to change variable in Program.cs like this:
 
-![Picture showing some Program.cs changes as an example](ZadanieRekrutacyjne/pics/chn2.png?raw=true "Code")
+![Picture showing some Program.cs changes as an example](pics/chn2.png?raw=true "Code")
 
 Otherwise it will return dated formatted in our OS's DateTime format.
 	
